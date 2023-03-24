@@ -115,3 +115,7 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 
 kubeadm join k8s-m1.local:6443 --token 4ezrqy.t4yvvy4zhmu1r1aw \
 	--discovery-token-ca-cert-hash sha256:9c514f1e365bd1707ee64b3e25fe263aa432bbdae1d4570cf13e44ca61838af6
+
+
+kubectl -n kubernetes-dashboard  port-forward services/kubernetes-dashboard 8080:443
+kubectl -n kubernetes-dashboard create token admin-user
