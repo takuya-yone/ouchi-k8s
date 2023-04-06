@@ -377,8 +377,6 @@ version = 2
   uid = 0
 ```
 
-
-
 ```Bash
 sudo systemctl restart containerd
 ```
@@ -406,4 +404,10 @@ sudo kubeadm join k8s-m1.local:6443 --token k2jq22.pr5j9tiva6yvarkl \
 ```Bash
 kubectl -n kubernetes-dashboard  port-forward services/kubernetes-dashboard 8080:443
 kubectl -n kubernetes-dashboard create token admin-user
+```
+
+## add ansible
+```Bash
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
 ```
