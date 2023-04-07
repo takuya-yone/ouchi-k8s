@@ -123,8 +123,9 @@ sudo apt-get install -y kubelet kubeadm kubectl docker-ce containerd.io
 
 sudo rm /etc/containerd/config.toml
 sudo containerd config default | sudo tee /etc/containerd/config.toml
+```
 
-```toml
+```Toml:config.toml
 disabled_plugins = []
 imports = []
 oom_score = 0
